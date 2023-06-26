@@ -61,8 +61,7 @@ let inputsDicteVocal = [
 //*Must be an empty object
 let organizedDates = {};
 
-
-const fiveMinut = 300000; 
+const fiveMinut = 300000;
 for (let i = 0; i < inputsDicteVocal.length; i++) {
   //* Take timestamps from array
   let dates = new Date(inputsDicteVocal[i].date);
@@ -81,15 +80,17 @@ for (let i = 0; i < inputsDicteVocal.length; i++) {
 
 //console.log(organizedDates);
 
-let sortedbyTen = Object.values(organizedDates).map((d) => {
-  let index = 0;
-  let arr = [];
-  while (index < d.length) {
-    arr.push(d.slice(index, index + 5));
-    index = index + 5;
-  }
-  return arr;
-}).flat();
+let sortedbyTen = Object.values(organizedDates)
+  .map((d) => {
+    let index = 0;
+    let arr = [];
+    while (index < d.length) {
+      arr.push(d.slice(index, index + 5));
+      index = index + 5;
+    }
+    return arr;
+  })
+  .flat();
 
 //console.log(sortedbyTen);
 
@@ -113,4 +114,3 @@ const result = sortedbyTen.map((m) => {
 
 // Final result
 console.log(result);
-

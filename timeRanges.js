@@ -393,8 +393,6 @@ const outputQuery = [
   },
 ];
 
-
-
 const booleanRanger = [[], []];
 
 outputQuery.forEach((row) => {
@@ -415,7 +413,7 @@ const ranges = [
 
 const groupByTimeRange = booleanRanger[0].reduce((acc, cur) => {
   const time = cur.date.slice(0, -8); // many ways to skin a cat
- // console.log(time);
+  // console.log(time);
   const range = ranges.find(
     (range) => time >= range.start && time <= range.end
   ); // find returns the first found

@@ -1,8 +1,12 @@
-const moment = require('moment-timezone');
+const moment = require("moment-timezone");
 
 let time_db = "2023-06-14T14:00:00.000Z";
 let time_payload = "2023-06-14 14:30:00";
-let time_payload_formated = moment.tz(time_payload, 'YYYY-MM-DD HH:mm:ss', 'UTC');
+let time_payload_formated = moment.tz(
+  time_payload,
+  "YYYY-MM-DD HH:mm:ss",
+  "UTC"
+);
 
 let all_times = [
   "2023-06-14T10:00:00.000Z",
@@ -11,7 +15,7 @@ let all_times = [
   "2023-06-14T16:00:00.000Z",
   "2023-06-14T18:00:00.000Z",
   "2023-06-14T20:00:00.000Z",
-  "2023-06-14T22:00:00.000Z"
+  "2023-06-14T22:00:00.000Z",
 ];
 
 function updatedUpcomingTimes(timeDb, timePayload, allTimes) {
@@ -21,7 +25,10 @@ function updatedUpcomingTimes(timeDb, timePayload, allTimes) {
     for (let i = 0; i < allTimes.length; i++) {
       let utcDate = new Date(allTimes[i]);
       utcDate.setTime(utcDate.getTime() + diff);
-      let formattedTimestamp = utcDate.toISOString().replace(/T/, ' ').replace(/\.\d+Z$/, '');
+      let formattedTimestamp = utcDate
+        .toISOString()
+        .replace(/T/, " ")
+        .replace(/\.\d+Z$/, "");
       allTimes[i] = formattedTimestamp;
     }
   }

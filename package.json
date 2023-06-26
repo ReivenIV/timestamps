@@ -1,6 +1,15 @@
-{
+{  "name": "timestamps",
+    "scripts": {
+
+    
+    "prettier": "prettier --write \"**/*.js\""
+  },
   "dependencies": {
     "moment": "^2.29.4",
     "moment-timezone": "^0.5.41"
+  },
+    "devDependencies": {
+    "prettier": "^2.8.8"
   }
+
 }

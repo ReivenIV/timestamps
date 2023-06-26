@@ -1,26 +1,26 @@
-const moment = require('moment-timezone');
+const moment = require("moment-timezone");
 
 let payload = [
   {
     id: 918,
     user_id: 113,
-    drug_name: 'Test_1',
+    drug_name: "Test_1",
     quantity_mg: 100,
-    time: [ '10:00', '12:00' ],
+    time: ["10:00", "12:00"],
     tablets: 1,
-    created_at: '2023-06-05T12:41:52.000Z',
-    timezone: 'Europe/Paris'
+    created_at: "2023-06-05T12:41:52.000Z",
+    timezone: "Europe/Paris",
   },
   {
     id: 919,
     user_id: 113,
-    drug_name: 'Test_2',
+    drug_name: "Test_2",
     quantity_mg: 100,
-    time: [ '10:00', '12:00' ],
+    time: ["10:00", "12:00"],
     tablets: 1,
-    created_at: '2023-06-05T12:42:14.000Z',
-    timezone: 'Africa/Addis_Ababa'
-  }
+    created_at: "2023-06-05T12:42:14.000Z",
+    timezone: "Africa/Addis_Ababa",
+  },
 ];
 
 //* 2 maps
@@ -45,8 +45,7 @@ payload = payload.map((eachObj) => {
 //       .format("HH:mm");
 //     eachObj.time[index] = eachTimeUtc;
 //   });
-// }); 
-
+// });
 
 //* for of
 // for (const eachObj of payload) {
@@ -61,7 +60,6 @@ payload = payload.map((eachObj) => {
 //   eachObj.time = updatedTime;
 // }
 
-
 // for (const eachObj of payload) {
 //   const updatedTime = [];
 //   for (const index in eachObj.time) {
@@ -74,8 +72,5 @@ payload = payload.map((eachObj) => {
 //   }
 //   eachObj.time = updatedTime;
 // }
-
-
-
 
 console.log(payload);

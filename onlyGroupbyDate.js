@@ -148,4 +148,4 @@ let groupByTimePeriod = function (array, timestamp, period) {
 //console.log("Grouped by Month", groupByTimePeriod(inputsArray, 'date', 'month'));
 
 //! Year
-console.log( 'Grouped by year', groupByTimePeriod(inputsArray, "date", "year"));
+console.log("Grouped by year", groupByTimePeriod(inputsArray, "date", "year"));
