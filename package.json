@@ -1,7 +1,6 @@
-{  "name": "timestamps",
-    "scripts": {
-
-    
+{  
+  "name": "timestamps",
+    "scripts": {    
     "prettier": "prettier --write \"**/*.js\""
   },
   "dependencies": {
